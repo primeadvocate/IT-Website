@@ -2507,7 +2507,7 @@ h5,
   right: 0;
   bottom: 0;
   content: "";
-  opacity: 0.6;
+  opacity: 0.7;
   background: #060a24;
 }
 .hero-wrap.hero-wrap-2 {
@@ -2586,6 +2586,21 @@ h5,
 
 .slider-text .bread {
   font-weight: 700;
+}
+
+.ml4 {
+  position: relative;
+  font-weight: 900;
+  font-size: 4.5em;
+}
+.ml4 .letters {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  color: #ffa41b;
 }
 
 @media (min-width: 992px) {

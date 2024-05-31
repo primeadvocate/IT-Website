@@ -7,15 +7,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="icon" type="image/png" href="images/QA favicon.ico">
+    <link rel="icon" type="image/png" href="images/QA favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&amp;display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="font-awesome.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
@@ -113,7 +110,7 @@
           data-scrollax-parent="true"
         >
           <div
-            class="col-md-8 ftco-animate mt-5 pt-md-5"
+            class="col-md-9 ftco-animate mt-4"
             data-scrollax=" properties: { translateY: '70%' }"
           >
             <div class="row">
@@ -127,13 +124,14 @@
                 </p>
               </div>
             </div>
-            <h1
-              class="mb-4"
-              data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"
-            >
-              Your Trusted Partner in <br />
-              IT Consultancy
-            </h1>
+            <div>
+              <h1>Your Trusted Partner In</h1>
+              <h1 class="ml4">
+                <span class="letters letters-1">Software Development</span>
+                <span class="letters letters-2">IT Consultancy</span>
+                <span class="letters letters-3">Quality Assurance</span>
+              </h1>
+            </div>
           </div>
         </div>
       </div>
@@ -834,6 +832,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
     <script
       async
@@ -855,5 +854,67 @@
       data-cf-beacon='{"rayId":"88857771f91d93c6","b":1,"version":"2024.4.1","token":"cd0b4b3a733644fc843ef0b185f98241"}'
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+      //animatedText
+      var ml4 = {};
+      ml4.opacityIn = [0, 1];
+      ml4.scaleIn = [0.2, 1];
+      ml4.scaleOut = 3;
+      ml4.durationIn = 900;
+      ml4.durationOut = 800;
+      ml4.delay = 800;
+
+      anime
+        .timeline({ loop: true })
+        .add({
+          targets: ".ml4 .letters-1",
+          opacity: ml4.opacityIn,
+          scale: ml4.scaleIn,
+          duration: ml4.durationIn,
+        })
+        .add({
+          targets: ".ml4 .letters-1",
+          opacity: 0,
+          scale: ml4.scaleOut,
+          duration: ml4.durationOut,
+          easing: "easeInExpo",
+          delay: ml4.delay,
+        })
+        .add({
+          targets: ".ml4 .letters-2",
+          opacity: ml4.opacityIn,
+          scale: ml4.scaleIn,
+          duration: ml4.durationIn,
+        })
+        .add({
+          targets: ".ml4 .letters-2",
+          opacity: 0,
+          scale: ml4.scaleOut,
+          duration: ml4.durationOut,
+          easing: "easeInExpo",
+          delay: ml4.delay,
+        })
+        .add({
+          targets: ".ml4 .letters-3",
+          opacity: ml4.opacityIn,
+          scale: ml4.scaleIn,
+          duration: ml4.durationIn,
+        })
+        .add({
+          targets: ".ml4 .letters-3",
+          opacity: 0,
+          scale: ml4.scaleOut,
+          duration: ml4.durationOut,
+          easing: "easeInExpo",
+          delay: ml4.delay,
+        })
+        .add({
+          targets: ".ml4",
+          opacity: 0,
+          duration: 500,
+          delay: 500,
+        });
+    </script>
   </body>
 </html>
