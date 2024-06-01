@@ -2487,6 +2487,10 @@ h5,
   color: #000000;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .hero-wrap {
   width: 100%;
   height: 100%;
