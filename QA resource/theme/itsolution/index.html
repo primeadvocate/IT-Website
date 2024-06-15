@@ -130,6 +130,7 @@
                 <span class="letters letters-1">Software Development</span>
                 <span class="letters letters-2">IT Consultancy</span>
                 <span class="letters letters-3">Quality Assurance</span>
+                <span class="letters letters-4">Project Management</span>
               </h1>
             </div>
           </div>
@@ -138,19 +139,19 @@
     </div>
     <section class="ftco-intro py-5">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-9">
+        <div class="row justify-content-start">
+          <div class="col-md-12">
             <div class="row d-flex align-items-stretch">
-              <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+              <div class="col-md-3 d-flex align-self-stretch ftco-animate">
                 <div class="services-1 color-1">
                   <div class="line"></div>
-                  <div class="icon"><span class="flaticon-cyber"></span></div>
+                  <div class="icon"><span class="flaticon-web-programming"></span></div>
                   <div class="media-body">
                     <h3 class="heading mb-3">Business and Domestic Software Development</h3>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+              <div class="col-md-3 d-flex align-self-stretch ftco-animate">
                 <div class="services-1 color-1">
                   <div class="line"></div>
                   <div class="icon">
@@ -161,12 +162,21 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+              <div class="col-md-3 d-flex align-self-stretch ftco-animate">
                 <div class="services-1 color-2">
                   <div class="line"></div>
                   <div class="icon"><span class="flaticon-bolt"></span></div>
                   <div class="media-body">
                     <h3 class="heading mb-3">Quality Assurance</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+                <div class="services-1 color-2">
+                  <div class="line"></div>
+                  <div class="icon"><span class="flaticon-presentation"></span></div>
+                  <div class="media-body">
+                    <h3 class="heading mb-3">Project Management</h3>
                   </div>
                 </div>
               </div>
@@ -333,7 +343,7 @@
             <div class="media block-6 services d-block">
               <div class="line"></div>
               <div class="icon">
-                <span class="flaticon-presentation"></span>
+                <span class="flaticon-cyber"></span>
               </div>
               <div class="media-body">
                 <h3 class="heading mb-3">System Integration</h3>
@@ -656,7 +666,10 @@
         <div class="row">
           <div class="col-md-6 half ftco-animate">
             <h2 class="mb-4">Don't hesitate to contact us</h2>
-            <form action="#" class="appointment">
+            <form action="https://api.web3forms.com/submit" method="POST" class="appointment" id="myForm">
+
+              <input type="hidden" name="access_key" value="ec0a66cf-211b-40cb-8fdc-222ef72b96bb">
+
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
@@ -664,6 +677,7 @@
                       type="text"
                       class="form-control"
                       placeholder="Your Name"
+                      name="name"
                     />
                   </div>
                 </div>
@@ -673,6 +687,7 @@
                       type="text"
                       class="form-control"
                       placeholder="Email"
+                      name="email"
                     />
                   </div>
                 </div>
@@ -683,12 +698,13 @@
                         <div class="icon">
                           <span class="fa fa-chevron-down"></span>
                         </div>
-                        <select name id class="form-control">
-                          <option value>Services</option>
-                          <option value>Web Development</option>
-                          <option value>Database Analysis</option>
-                          <option value>Server Security</option>
-                          <option value>System Integration</option>
+                        <select name="services" id class="form-control">
+                          <option value="services">Services</option>
+                          <option value="Web Development">Web Development</option>
+                          <option value="Database Analysis">Database Analysis</option>
+                          <option value="Server Security">Server Security</option>
+                          <option value="System Integration">System Integration</option>
+                          <option value="Project Management">Project Management</option>
                         </select>
                       </div>
                     </div>
@@ -697,7 +713,7 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <textarea
-                      name
+                      name="message"
                       id
                       cols="30"
                       rows="7"
@@ -708,6 +724,7 @@
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     <input
                       type="submit"
                       value="Send message"
@@ -904,6 +921,20 @@
         })
         .add({
           targets: ".ml4 .letters-3",
+          opacity: 0,
+          scale: ml4.scaleOut,
+          duration: ml4.durationOut,
+          easing: "easeInExpo",
+          delay: ml4.delay,
+        })
+        .add({
+          targets: ".ml4 .letters-4",
+          opacity: ml4.opacityIn,
+          scale: ml4.scaleIn,
+          duration: ml4.durationIn,
+        })
+        .add({
+          targets: ".ml4 .letters-4",
           opacity: 0,
           scale: ml4.scaleOut,
           duration: ml4.durationOut,
